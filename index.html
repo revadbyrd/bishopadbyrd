@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="The Rt. Rev. Alex D. Byrd: Founding Pastor of Living Faith Covenant Church, Episcopal Assistant in The Fellowship of Affirming Ministries, and Regional Vice President with Primerica.">
+<title>Alex D. Byrd</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Pinyon+Script&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Layout: a church-flyer hero (gradient, light rays, gold ring, cut-out portrait), then ivory content bands framed by deep burgundy and royal blue. Single deliberate look. */
+:root {
+  --wine: #4a0f1e;
+  --wine-2: #7a1a30;
+  --royal: #16306b;
+  --night: #0c1a3d;
+  --gold: #d9ab3a;
+    --purple: #4b2a7b;
+  --gold-hi: #f6dd8f;
+  --ivory: #fbf6ec;
+  --paper: #ffffff;
+  --ink: #23161b;
+  --muted: #6c5a60;
+  --rule: #e6d9c6;
+  --display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --script: "Pinyon Script", "Snell Roundhand", cursive;
+  --label: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--ivory); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+a { color: var(--wine-2); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-family: var(--label); font-weight: 600; font-size: 14px; letter-spacing: .28em; text-transform: uppercase; }
+
+/* HERO: crest-oval frame */
+.hero {
+  position: relative; overflow: hidden; color: #fff;
+  background:
+    radial-gradient(ellipse 40% 60% at 74% 42%, rgba(246,221,143,.38), transparent 62%),
+    linear-gradient(125deg, var(--wine) 0%, var(--wine-2) 32%, var(--purple) 66%, var(--night) 100%);
+}
+.hero::before { content: ""; position: absolute; left: 74%; top: 42%; width: 1300px; height: 1300px; transform: translate(-50%, -50%);
+  background: repeating-conic-gradient(rgba(255,255,255,.075) 0 3deg, transparent 3deg 11deg);
+  -webkit-mask: radial-gradient(circle, #000 0 20%, transparent 52%); mask: radial-gradient(circle, #000 0 20%, transparent 52%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; left: -5%; right: -5%; bottom: -70px; height: 140px;
+  background: var(--ivory); border-top: 5px solid var(--gold); border-radius: 50% 50% 0 0 / 100% 100% 0 0; z-index: 2; }
+.strip { position: relative; z-index: 3; border-bottom: 1px solid rgba(246,221,143,.3); background: rgba(12,26,61,.35); }
+.strip .wrap { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; padding-block: 10px; font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold-hi); }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: end; gap: 20px; padding-block: 34px 0; }
+.hero-copy { padding-bottom: 116px; min-width: 0; }
+.script { font-family: var(--script); color: var(--gold-hi); font-size: clamp(38px, 5.5vw, 60px); line-height: 1; display: block; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 11.5vw, 144px); line-height: .9; letter-spacing: .01em; text-transform: uppercase;
+  background: linear-gradient(180deg, #fff 0 55%, var(--gold-hi) 56%, var(--gold) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,.35)); }
+.grace { margin: 20px 0 0; padding-left: 16px; border-left: 4px solid var(--gold); max-width: 36ch; }
+.grace q { display: block; font-style: italic; font-size: 20px; line-height: 1.4; color: #fff; quotes: "\201C" "\201D"; }
+.grace span { display: block; margin-top: 6px; font-family: var(--label); font-weight: 600; font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
+.titles { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+.titles li { font-family: var(--label); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 15px; padding: 6px 12px; border: 1px solid rgba(246,221,143,.6); color: #fff; background: rgba(12,26,61,.35); }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.btn { display: inline-block; font-family: var(--label); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 16px; padding: 13px 22px; text-decoration: none; border-radius: 999px; }
+.btn-gold { background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: var(--wine); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+.btn-ghost { color: #fff; border: 2px solid var(--gold-hi); }
+.portrait { position: relative; justify-self: center; width: min(100%, 400px); padding-top: 20px; }
+.oval { position: absolute; left: 4%; right: 4%; top: 0; bottom: 60px; border-radius: 50% / 46%;
+  background: radial-gradient(ellipse at 50% 35%, #f3e1ee 0%, #c9a6c9 38%, #6c3d8f 78%, var(--purple) 100%);
+  border: 10px solid var(--purple); outline: 4px solid var(--gold); outline-offset: 0; box-shadow: 0 0 0 9px rgba(217,171,58,.35), 0 20px 50px rgba(0,0,0,.45); }
+.portrait > img.who { position: relative; z-index: 1; display: block; width: 92%; margin: 0 auto; max-width: 100%; height: auto; filter: drop-shadow(0 10px 30px rgba(0,0,0,.45)); }
+.portrait .seal { position: absolute; left: 50%; bottom: 52px; transform: translateX(-50%); width: 110px; max-width: 30%; height: auto; z-index: 3; filter: drop-shadow(0 8px 18px rgba(0,0,0,.5)); }
+.foot-ep { display: flex; gap: 22px; align-items: flex-start; }
+.foot-ep > img { width: 96px; height: auto; flex: none; filter: drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
+/* SECTIONS */
+section { padding-block: 64px; }
+.head { display: grid; gap: 4px; margin-bottom: 30px; }
+.head .eyebrow { color: var(--royal); }
+.head h2 { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(36px, 5vw, 54px); line-height: 1; color: var(--wine); }
+.head h2 em { font-family: var(--script); font-style: normal; text-transform: none; color: var(--gold); font-size: 1.15em; }
+
+/* Three callings, flyer "speaker circle" treatment */
+.callings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.calling { background: var(--paper); border: 1px solid var(--rule); padding: 0 24px 26px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.badge { align-self: flex-start; margin-top: -1px; padding: 10px 16px 8px; color: #fff; font-family: var(--display); font-size: 22px; letter-spacing: .04em; text-transform: uppercase; }
+.c-apostle .badge { background: var(--wine-2); }
+.c-bishop .badge { background: var(--royal); }
+.c-finance .badge { background: linear-gradient(180deg, var(--gold), #b98a1c); color: var(--wine); }
+.calling h3 { font-family: var(--label); font-weight: 700; font-size: 24px; line-height: 1.15; color: var(--ink); text-transform: uppercase; letter-spacing: .02em; margin-top: 6px; }
+.calling p { margin: 0; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
+.chip { font-family: var(--label); font-weight: 600; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: 6px 12px; border: 1.5px solid var(--wine-2); color: var(--wine-2); border-radius: 999px; }
+.chip:hover { background: var(--wine-2); color: #fff; }
+.chip.todo { border-style: dashed; border-color: #b9a88a; color: var(--muted); }
+
+/* About */
+.about { background: var(--paper); border-block: 1px solid var(--rule); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+.about-aside { font-family: var(--script); font-size: 40px; line-height: 1.15; color: var(--wine-2); border-left: 5px solid var(--gold); padding-left: 20px; }
+.about-body { max-width: 65ch; min-width: 0; }
+.about-body p { margin: 0 0 16px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.facts b { display: block; font-family: var(--display); font-weight: 400; font-size: 34px; color: var(--royal); line-height: 1; }
+.facts span { font-family: var(--label); font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Booking band */
+.book { background: linear-gradient(120deg, var(--night), var(--royal)); color: #fff; }
+.book .head .eyebrow { color: var(--gold-hi); }
+.book .head h2 { color: #fff; }
+.slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.slot { display: flex; flex-direction: column; gap: 4px; padding: 18px; color: #fff; text-decoration: none; border: 1px solid rgba(246,221,143,.45); background: rgba(255,255,255,.04); }
+.slot:hover { background: rgba(217,171,58,.16); }
+.slot .eyebrow { font-size: 13px; color: var(--gold-hi); }
+.slot strong { font-family: var(--label); font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.slot span { color: #d9d3e6; font-size: 15px; }
+.slot.pastoral { border-color: var(--gold); background: rgba(122,26,48,.45); }
+
+/* Media archive */
+.media-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.group h3 { font-family: var(--label); font-weight: 700; font-size: 18px; letter-spacing: .18em; text-transform: uppercase; color: var(--royal); padding-bottom: 8px; border-bottom: 3px solid var(--gold); }
+.group ol { list-style: none; margin: 0; padding: 0; }
+.group li { display: grid; grid-template-columns: 104px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.group time { font-family: var(--label); font-weight: 600; font-size: 15px; letter-spacing: .06em; color: var(--muted); font-variant-numeric: tabular-nums; text-transform: uppercase; }
+.group a { font-weight: 600; text-decoration: none; color: var(--ink); }
+.group a:hover { color: var(--wine-2); text-decoration: underline; }
+.group .src { display: block; font-size: 14px; color: var(--muted); }
+
+/* Connect */
+.connect { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 860px) { .connect { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .connect { grid-template-columns: 1fr; } }
+.social { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--paper); border: 1px solid var(--rule); text-decoration: none; color: var(--ink); min-width: 0; }
+a.social:hover { border-color: var(--gold); box-shadow: 0 4px 14px rgba(74,15,30,.10); }
+.social svg { width: 40px; height: 40px; flex: none; }
+.social .tfam-words { width: 96px; height: auto; flex: none; }
+.social .tfam-global { width: 110px; height: auto; flex: none; }
+.social strong { display: block; font-family: var(--label); font-weight: 700; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; }
+.social small { display: block; font-size: 14px; color: var(--muted); line-height: 1.3; }
+.social.todo { border-style: dashed; opacity: .7; }
+.vcard { margin-top: 14px; font-size: 14px; padding: 10px 18px; }
+.tbd { color: var(--gold) !important; }
+
+/* Footer */
+footer { position: relative; overflow: hidden; background: var(--wine); color: #ecdccc; padding-block: 72px 44px; }
+#crowd { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 30%; opacity: .5; pointer-events: none; }
+footer::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--wine) 0 30%, rgba(74,15,30,.55) 60%, rgba(74,15,30,.2)); pointer-events: none; z-index: 1; }
+footer .wrap { position: relative; z-index: 2; }
+.foot { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+footer h3 { font-family: var(--label); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi); font-size: 17px; margin-bottom: 8px; }
+footer p { margin: 0 0 4px; font-size: 16px; }
+footer a { color: var(--gold-hi); }
+.legal { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(246,221,143,.25); font-size: 13px; color: #c9b4a8; }
+.legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+.legal-links { font-family: var(--label); font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-copy { padding-bottom: 0; order: 2; }
+  .portrait { order: 1; width: min(80%, 320px); margin-top: 8px; }
+  .hero-copy { padding-bottom: 96px; }
+  .callings, .media-groups, .foot, .about-grid { grid-template-columns: 1fr; }
+  .about-grid { gap: 20px; }
+}
+@media (max-width: 480px) {
+  .facts { grid-template-columns: 1fr; }
+  .group li { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portrait img.who { animation: rise .9s ease-out both; }
+  @keyframes rise { from { transform: translateY(18px); } to { transform: none; } }
+}
+</style>
+<style>body{margin:0} img{max-width:100%}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="strip"><div class="wrap"><span>Episcopal Office of Alex D. Byrd</span><span>Dallas, Texas</span></div></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="script">The Rt. Rev.</span>
+      <h1>Alex D.<br>Byrd</h1>
+      <p class="grace"><q>A voice heralding the extravagant and lavish grace God has bestowed upon all who believe.</q><span>Vocal Grace</span></p>
+      <ul class="titles">
+        <li>Founding Pastor · Living Faith Covenant Church</li>
+        <li>Episcopal Assistant · The Fellowship of Affirming Ministries</li>
+        <li>Regional Vice President · Primerica</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://calendar.app.google/1uXv5FBr4PxxwXf37">Book with the Bishop</a>
+        <a class="btn btn-ghost" href="#about">About Alex</a>
+        <a class="btn btn-ghost" href="BishopAlexByrd.vcf">Download vCard</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="oval" aria-hidden="true"></div>
+      <img class="who" src="assets/alex.webp" alt="Bishop Alex D. Byrd" width="331" height="522">
+      <img class="seal" src="assets/seal.webp" alt="The Seal of the Bishop, Alex Dexter Byrd" width="360" height="537">
+    </div>
+  </div>
+</header>
+
+<section id="callings">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Three callings, one life</span>
+      <h2>Where Alex <em>Serves</em></h2>
+    </div>
+    <div class="callings">
+      <article class="calling c-apostle">
+        <span class="badge">Senior Founder</span>
+        <h3>Living Faith Covenant Church</h3>
+        <p>Senior Founder of a radically inclusive, Afro-centric Pentecostal church in Oak Cliff, Dallas, gathering since August 2000.</p>
+        <p><small>3403 Shelley Blvd., Dallas, TX 75211</small></p>
+        <div class="links">
+          <a class="chip" href="https://livingfaithdfw.org/">Church Website</a>
+          <a class="chip" href="https://www.facebook.com/lfccdfw3403">Church Facebook</a>
+          <a class="chip" href="https://www.youtube.com/@livingfaithcovenantchurchd1660">Church YouTube</a>
+        </div>
+      </article>
+      <article class="calling c-bishop">
+        <span class="badge">Bishop</span>
+        <h3>The Fellowship of Affirming Ministries</h3>
+        <p>Serves as Episcopal Assistant to the Presiding Prelate, Bishop Yvette A. Flunder. Living Faith is a TFAM member church.</p>
+        <div class="links">
+          <a class="chip" href="https://www.wearetfam.org/">TFAM</a>
+          <a class="chip" href="https://tfamglobal.org/">TFAM Global</a>
+          <a class="chip" href="https://www.facebook.com/wearetfam/">TFAM on Facebook</a>
+        </div>
+      </article>
+      <article class="calling c-finance">
+        <span class="badge">Financial</span>
+        <h3>Regional Vice President, Primerica</h3>
+        <p>Helps families and business owners build a game plan for protection, savings, and income, and introduces others to a business opportunity.</p>
+        <div class="links">
+          <a class="chip" href="https://alexdbyrd.net/">Schedule a Consultation</a>
+          <a class="chip" href="https://www.primerica.com/public/PrimericaRep?rep=adbyrd">Primerica Profile</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="about-aside">Grace, extravagant and lavish, for all who believe.</div>
+    <div class="about-body">
+      <div class="head">
+        <span class="eyebrow">About Alex</span>
+        <h2>Pastor. Bishop. <em>Builder.</em></h2>
+      </div>
+      <p>Bishop Alex D. Byrd has spent more than two decades building places where people of faith can belong. After moving from Austin back to Dallas, he gathered twelve people for the first service of Living Faith Covenant Church on August 6, 2000. Today Living Faith is a radically inclusive, Afro-centric Pentecostal congregation in Oak Cliff, and Bishop Byrd serves as its Senior Founder.</p>
+      <p>Within The Fellowship of Affirming Ministries, he serves as Episcopal Assistant to the Presiding Prelate, Bishop Yvette A. Flunder. In that role he has supported progressive Pentecostal churches from Georgia to California.</p>
+      <p>His teaching reaches beyond the pulpit through Vocal Grace, an outreach of his ministry that shares sermons, testimonies, and greetings online, with one message at its center: the extravagant and lavish grace of God.</p>
+      <p>Alex also leads a financial services practice as a Regional Vice President with Primerica in DeSoto, helping families build a game plan to meet their financial objectives.</p>
+      <div class="facts">
+        <div><b>2000</b><span>Living Faith founded</span></div>
+        <div><b class="tbd">[#]</b><span>Churches supported</span></div>
+        <div><b>26</b><span>Years in pastoral ministry at Living Faith</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">News, writing &amp; media</span>
+      <h2>In the <em>Press</em></h2>
+    </div>
+    <div class="media-groups">
+      <div class="group">
+        <h3>Press</h3>
+        <ol>
+          <li><time datetime="2021-07-30">Jul 30, 2021</time><div><a href="https://dallasvoice.com/living-faith-celebrates-21-years/">Living Faith celebrates 21 years</a><span class="src">Dallas Voice</span></div></li>
+          <li><time datetime="2025-10-06">Oct 6, 2025</time><div><a href="https://www.loveboldly.org/post/bishops">Bishops</a><span class="src">Love Boldly · Rev. Dr. Ben Huelskamp</span></div></li>
+        </ol>
+      </div>
+      <div class="group">
+        <h3>Blog &amp; Writing</h3>
+        <ol>
+          <li><time datetime="2010-04-20">Apr 20, 2010</time><div><a href="https://unfinishedlivesblog.com/2010/04/20/black-lgbtq-affirming-church-in-dallas-acts-to-counter-religious-homophobia/">Black LGBTQ Affirming Church in Dallas Acts to Counter Religious Homophobia</a><span class="src">Unfinished Lives</span></div></li>
+          <li><time datetime="2010-04-16">Apr 16, 2010</time><div><a href="https://unfinishedlivesblog.com/2010/04/16/multi-racial-response-to-religious-gay-bashing-at-rally-for-love-in-dallas/">Multi-Racial Response to Religious Gay Bashing at "Rally for Love" in Dallas</a><span class="src">Unfinished Lives</span></div></li>
+        </ol>
+      </div>
+      <div class="group">
+        <h3>Sermons &amp; Video</h3>
+        <ol>
+          <li><time datetime="2026-03-10">Mar 10, 2026</time><div><a href="https://www.youtube.com/watch?v=wi-dJqAZ1rA">We Have Become Sodom &amp; Gomorrah</a><span class="src">Vocal Grace · YouTube</span></div></li>
+          <li><time datetime="2025-06-13">Jun 13, 2025</time><div><a href="https://www.youtube.com/watch?v=4QZqhd7CmkM">How to Follow Leadership</a><span class="src">Vocal Grace · YouTube</span></div></li>
+          <li><time datetime="2024-01-02">Jan 2, 2024</time><div><a href="https://www.youtube.com/watch?v=Z14HbTsMdJ8">2024 New Year Greeting from Bishop Alex D. Byrd</a><span class="src">Vocal Grace · YouTube</span></div></li>
+          <li><time datetime="2023-03-17">Mar 17, 2023</time><div><a href="https://www.youtube.com/watch?v=KraAki5-E3A">Testimony: What Do I Have To Show For It</a><span class="src">Vocal Grace · YouTube</span></div></li>
+          <li><time datetime="2021-06-20">Jun 20, 2021</time><div><a href="https://www.facebook.com/cityofrefugeucc/videos/fathers-day-service-guest-speaker-bishop-alex-byrd-june-20-2021/373109047492793/">Father's Day Service, guest speaker</a><span class="src">City of Refuge UCC · Facebook</span></div></li>
+          <li><time datetime="2014-07-01">Jul 1, 2014</time><div><a href="https://www.youtube.com/watch?v=R0LOVxMWSvQ">Living Faith Covenant Church 14th Anniversary</a><span class="src">Living Faith Covenant Church · YouTube</span></div></li>
+          <li><time>Archive</time><div><a href="http://www.operationrebirth.com/archive/spotlight-abyrd.html">Spotlight interview</a><span class="src">Operation Rebirth</span></div></li>
+        </ol>
+      </div>
+      <div class="group">
+        <h3>Research on TFAM</h3>
+        <ol>
+          <li><time datetime="2018-03-30">2018</time><div><a href="https://academic.oup.com/chicago-scholarship-online/book/13330/chapter-abstract/166693764">"What a Fellowship": Radically Inclusive Futures</a><span class="src">Ellen Lewin, <i>Filled with the Spirit</i> · University of Chicago Press</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="connect" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Follow</span>
+      <h2>Stay <em>Connected</em></h2>
+    </div>
+    <div class="connect">
+      <a class="social" href="https://www.linkedin.com/in/alex-byrd-6121817"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M5.3 9.4h2.9V19H5.3zM6.8 4.8a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4zM10 9.4h2.8v1.3c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19h-2.9v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V19H10z"/></svg><span><strong>LinkedIn</strong><small>Alex Byrd</small></span></a>
+      <a class="social" href="https://www.facebook.com/BishopAlexDByrd/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 19v-6.1h2.1l.3-2.4h-2.4V9c0-.7.2-1.2 1.2-1.2h1.3V5.6c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.8v2.4h2.1V19z"/></svg><span><strong>Facebook</strong><small>Bishop Alex D. Byrd</small></span></a>
+      <a class="social" href="https://www.facebook.com/lfccdfw3403"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 19v-6.1h2.1l.3-2.4h-2.4V9c0-.7.2-1.2 1.2-1.2h1.3V5.6c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.8v2.4h2.1V19z"/></svg><span><strong>Facebook</strong><small>Living Faith Covenant Church</small></span></a>
+      <a class="social" href="https://www.youtube.com/@vocalgrace"><svg viewBox="0 0 24 24" aria-hidden="true"><rect y="4" width="24" height="16" rx="4.5" fill="#FF0000"/><path fill="#fff" d="M9.6 8.6v6.8l6-3.4z"/></svg><span><strong>YouTube</strong><small>Vocal Grace · Bishop Alex D. Byrd</small></span></a>
+      <a class="social" href="https://www.youtube.com/@livingfaithcovenantchurchd1660"><svg viewBox="0 0 24 24" aria-hidden="true"><rect y="4" width="24" height="16" rx="4.5" fill="#FF0000"/><path fill="#fff" d="M9.6 8.6v6.8l6-3.4z"/></svg><span><strong>YouTube</strong><small>Living Faith Covenant Church</small></span></a>
+      <a class="social" href="https://www.facebook.com/wearetfam/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.4 19v-6.1h2.1l.3-2.4h-2.4V9c0-.7.2-1.2 1.2-1.2h1.3V5.6c-.2 0-1-.1-1.9-.1-1.9 0-3.1 1.1-3.1 3.2v1.8H8.8v2.4h2.1V19z"/></svg><span><strong>Facebook</strong><small>The Fellowship of Affirming Ministries</small></span></a>
+      <a class="social" href="https://www.wearetfam.org/"><img class="tfam-words" src="assets/tfam-words.webp" alt="TFAM, The Fellowship of Affirming Ministries"><span><strong>Website</strong><small>wearetfam.org</small></span></a>
+      <a class="social" href="https://tfamglobal.org/"><img class="tfam-global" src="assets/tfam-global.webp" alt="TFAM Global"><span><strong>Website</strong><small>tfamglobal.org</small></span></a>
+      <a class="social" href="BishopAlexByrd.vcf"><img src="assets/seal.webp" alt="" style="width:30px;height:auto;flex:none;margin-inline:5px"><span><strong>Episcopal vCard</strong><small>Save to your contacts</small></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img id="crowd" src="assets/community.webp" alt="">
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-ep">
+        <img src="assets/seal.webp" alt="" width="360" height="537">
+        <div>
+        <h3>Episcopal Office</h3>
+        <p>3403 Shelley Blvd.<br>Dallas, TX 75211</p>
+        <p>(469) 658-8734</p>
+        <p>bishop@bishopadbyrd.org</p>
+        <a class="btn btn-gold vcard" href="BishopAlexByrd.vcf">Download Episcopal vCard</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Alex D. Byrd. Footer photo: Naassom Azevedo on Unsplash. Designed by <a href="https://redbootllc.com/website-launch">Red Boot LLC</a>.</span><span class="legal-links"><a href="ecard/">E-Card</a> | <a href="privacy/">Privacy Statement</a> | <a href="terms/">Terms Of Use</a></span></div>
+  </div>
+</footer>
+</body>
+</html>

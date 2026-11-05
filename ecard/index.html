@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bishop Alex D. Byrd</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Pinyon+Script&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Layout: a single digital calling card on a flyer-style field (gradient, light rays). Portrait in a gold ring, seal overlapping, contact rows, three actions. Wording unchanged from the approved site. */
+:root {
+  --wine: #4a0f1e; --wine-2: #7a1a30; --royal: #16306b; --night: #0c1a3d;
+  --gold: #d9ab3a; --gold-hi: #f6dd8f; --ivory: #fbf6ec; --ink: #23161b; --muted: #6c5a60; --rule: #e8dcc8;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --script: "Pinyon Script", "Snell Roundhand", cursive;
+  --label: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+html { background: var(--night); }
+html, body { min-height: 100%; }
+body { min-height: 100vh; }
+body {
+  font-family: var(--body); font-size: 17px; color: var(--ink);
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 18%, rgba(246,221,143,.32), transparent 65%),
+    linear-gradient(160deg, var(--wine) 0%, var(--wine-2) 35%, var(--royal) 75%, var(--night) 100%);
+  background-attachment: fixed;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 36px;
+  position: relative; overflow-x: hidden;
+}
+body::after {
+  content: ""; position: fixed; left: 50%; top: 14%; width: 1100px; height: 1100px; transform: translate(-50%, -50%);
+  background: repeating-conic-gradient(from 0deg, rgba(255,255,255,.07) 0 4deg, transparent 4deg 13deg);
+  -webkit-mask: radial-gradient(circle, #000 0 25%, transparent 60%); mask: radial-gradient(circle, #000 0 25%, transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+main { position: relative; z-index: 1; max-width: 460px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+
+.office { text-align: center; color: var(--gold-hi); font-family: var(--label); font-weight: 600; font-size: 14px; letter-spacing: .3em; text-transform: uppercase; }
+
+.portrait { position: relative; width: min(100%, 330px); margin: 6px auto 0; }
+.portrait::before { content: ""; position: absolute; left: 4%; right: 4%; top: 2%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(246,221,143,.55), rgba(217,171,58,.12) 62%, transparent 72%); border: 4px solid var(--gold); }
+.portrait > img:first-child { position: relative; display: block; width: 78%; max-width: 100%; height: auto; margin: 0 auto; filter: drop-shadow(0 12px 28px rgba(0,0,0,.45)); }
+.seal { position: absolute; right: -6px; bottom: 0; width: 104px; max-width: 32%; height: auto; filter: drop-shadow(0 8px 16px rgba(0,0,0,.45)); }
+
+.card { background: var(--ivory); border-top: 6px solid var(--gold); padding: 26px 24px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.35); display: flex; flex-direction: column; gap: 18px; }
+.name { text-align: center; }
+.name .script { font-family: var(--script); font-size: 42px; line-height: 1; color: var(--wine-2); display: block; }
+.name h1 { margin: 2px 0 0; font-family: var(--display); font-weight: 400; font-size: clamp(44px, 13vw, 60px); line-height: .95; text-transform: uppercase; color: var(--wine); text-wrap: balance; }
+
+.contact h2 { margin: 0 0 6px; font-family: var(--label); font-weight: 700; font-size: 17px; letter-spacing: .2em; text-transform: uppercase; color: var(--royal); padding-bottom: 8px; border-bottom: 3px solid var(--gold); }
+.contact dl { margin: 0; display: grid; }
+.row { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.row dt { font-family: var(--label); font-weight: 600; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.row dd { margin: 0; min-width: 0; overflow-wrap: break-word; font-size: 16px; }
+.row a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+.actions { display: grid; gap: 10px; }
+.btn { display: block; text-align: center; font-family: var(--label); font-weight: 700; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; padding: 14px 18px; border-radius: 999px; }
+.btn:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.btn-gold { background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: var(--wine); box-shadow: 0 6px 16px rgba(74,15,30,.22); }
+.btn-wine { background: var(--wine-2); color: #fff; }
+.btn-home { background: var(--royal); color: #fff; }
+.btn-line { border: 2px solid var(--royal); color: var(--royal); }
+
+.back { align-self: flex-start; font-family: var(--label); font-weight: 700; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-hi); text-decoration: none; border: 1.5px solid var(--gold-hi); border-radius: 999px; padding: 7px 14px; }
+.back:hover { background: rgba(246,221,143,.15); }
+footer { text-align: center; color: #e6d6cc; font-size: 13px; display: grid; gap: 6px; }
+footer a { color: var(--gold-hi); }
+@media (prefers-reduced-motion: no-preference) { .portrait > img:first-child { animation: rise .8s ease-out both; } @keyframes rise { from { transform: translateY(14px); } to { transform: none; } } }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="office">Episcopal Office of Alex D. Byrd</div>
+
+  <div class="portrait">
+    <img src="../assets/alex.webp" alt="Bishop Alex D. Byrd" width="331" height="522">
+    <img class="seal" src="../assets/seal.webp" alt="The Seal of the Bishop, Alex Dexter Byrd" width="360" height="537">
+  </div>
+
+  <section class="card">
+    <div class="name">
+      <span class="script">Bishop</span>
+      <h1>Alex D. Byrd</h1>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Our Office</h2>
+      <dl>
+        <div class="row"><dt>Email</dt><dd><a href="mailto:bishop@bishopadbyrd.org">bishop@bishopadbyrd.org</a></dd></div>
+        <div class="row"><dt>Phone</dt><dd><a href="tel:+14696588734">(469) 658-8734</a></dd></div>
+        <div class="row"><dt>Office Address</dt><dd>3403 Shelley Blvd, Dallas, TX 75211</dd></div>
+      </dl>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-gold" href="../BishopAlexByrd.vcf">Download vCard</a>
+      <a class="btn btn-wine" href="https://calendar.app.google/1uXv5FBr4PxxwXf37">Book an Appointment with Bishop</a>
+      <a class="btn btn-line" href="https://alexdbyrd.net">Book a Financial Consultation</a>
+      <a class="btn btn-home" href="../">Visit Main Site</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Copyright 2026 by Episcopal Office of Alex D. Byrd</span>
+    <span><a href="../">bishopadbyrd.org</a> &nbsp;|&nbsp; <a href="../privacy/">Privacy Statement</a> &nbsp;|&nbsp; <a href="../terms/">Terms Of Use</a></span>
+  </footer>
+</main>
+
+</body>
+</html>
