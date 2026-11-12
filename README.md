@@ -12,6 +12,7 @@ A static site with no build step. Every page is plain HTML and CSS.
 | `/ecard/` | Digital calling card for the Episcopal Office |
 | `/privacy/` | Privacy Statement |
 | `/terms/` | Terms Of Use |
+| `/VirtualBoardRoom/` | Redirect to the Virtual Board Room Zoom meeting (`/virtualboardroom/` also works) |
 | `/BishopAlexByrd.vcf` | Episcopal vCard (includes the Bishop's crest) |
 
 ## Folders
